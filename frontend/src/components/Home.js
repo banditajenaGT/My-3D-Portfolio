@@ -11,14 +11,14 @@ import YoutubeCard from './YoutubeCard'
 import { Link } from "react-router-dom";
 import { MouseOutlined } from '@mui/icons-material'
 
-const Home = ({timeline,youtube,skills}) => {
+const Home = ({ timeline, youtube, skills }) => {
 
     useEffect(() => {
         const textureLoader = new THREE.TextureLoader()
 
         const moonTexture = textureLoader.load(moonImg)
         const venusTexture = textureLoader.load(venusImg)
-        const spaceTexture=textureLoader.load(spaceImg)
+        const spaceTexture = textureLoader.load(spaceImg)
 
         const scene = new THREE.Scene()
         const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -48,7 +48,7 @@ const Home = ({timeline,youtube,skills}) => {
         scene.add(venus)
         scene.add(pointLight)
         scene.add(pointLight2)
-        scene.background=spaceTexture
+        scene.background = spaceTexture
 
         const constantSpeed = 0.04
         const constantSpeed2 = 0.01
@@ -89,16 +89,20 @@ const Home = ({timeline,youtube,skills}) => {
         }
         animation()
 
-        return window.addEventListener("scroll",()=>{
-            camera.rotation.z=window.scrollY*0.003
-            camera.rotation.x=window.scrollY*0.001
+        return window.addEventListener("scroll", () => {
+            camera.rotation.z = document.scrollY * 0.003
+            camera.rotation.x = document.scrollY * 0.001
 
-            const homeSkillBox=document.getElementById("homeSkillsBox")
-            if(window.scrollY>1000){
-                homeSkillBox.style.animationName="homeSkillBoxAniOn"
-            }
-            else{
-                homeSkillBox.style.animationName="homeSkillBoxAniOff"
+            if (window.location.pathname === "/") {
+                const homeSkillBox = document.getElementById("homeSkillsBox")
+                if (window.scrollY > 1000) {
+                    homeSkillBox.classList.add("homeSkillBoxAniOn");
+                    homeSkillBox.classList.remove("homeSkillBoxAniOff");
+                }
+                else { 
+                    homeSkillBox.classList.add("homeSkillBoxAniOff");
+                    homeSkillBox.classList.remove("homeSkillBoxAniOn");
+                }
             }
         })
         // eslint-disable-next-line
@@ -125,12 +129,12 @@ const Home = ({timeline,youtube,skills}) => {
                     <Link to="/project">VIEW MORE</Link>
                 </div>
                 <div className='homeScrollBtn'>
-                    <MouseOutlined/>
+                    <MouseOutlined />
                 </div>
             </div>
             <div className="homeContainer">
                 <Typography variant='h3'>TIMELINE</Typography>
-                <Timeline timeline={timeline}/>
+                <Timeline timeline={timeline} />
             </div>
             <div className="homeSkill">
                 <Typography variant='h3'>SKILLS</Typography>
@@ -176,7 +180,7 @@ const Home = ({timeline,youtube,skills}) => {
                     {youtube.map((item) => (
                         <YoutubeCard
                             key={item._id}
-                            id={item._id}    
+                            id={item._id}
                             image={item.image.url}
                             title={item.title}
                             url={item.url}

@@ -194,6 +194,12 @@ transform: translate(-50% , -50%);
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
+.homeSkillBoxAniOn{
+    animation-name: homeSkillBoxAniOn;
+}
+.homeSkillBoxAniOff{
+    animation-name: homeSkillBoxAniOff;
+}
 .homeSkillBox svg{
     font-size: 5vmax;
     padding: 1vmax;

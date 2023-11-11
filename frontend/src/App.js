@@ -24,7 +24,6 @@ function App() {
   useEffect(() => {
     dispatch(getUser())
     dispatch(loadUser())
-
   }, [dispatch])
   return (
     loading ? <Loading /> : (
