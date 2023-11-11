@@ -1,0 +1,280 @@
+.homeCanvas {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    filter: blur(3px);
+    position: absolute;
+}
+
+.homeCanvasContainer{
+    background-color: rgba(0, 0, 0, 0.151);
+    width: 100%;
+    z-index:2;
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+    margin: 0 1vmax;
+}
+
+.homeCanvasContainer h1{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    transform: translate(0 , -50%);
+    font: 400 3vmax "kenia";
+    filter: drop-shadow(0 0 2px blue);
+}
+
+.homeCanvasContainer h1 p{
+    padding:1.1vmax;
+    margin: 0.5vmax;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.5s;
+    color: black;
+}
+.homeCanvasContainer h1 p:hover{
+    transform: translateY(-10px);
+}
+.homeCanvasBox{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0% , -50%);
+    text-align: right;
+}
+.homeCanvasBox h2{
+    font: 900 3rem "Ubuntu Mono","Roboto";
+    letter-spacing: 20px;
+    line-height: 100px;
+    color: white;
+}
+
+.homeCanvasContainer a{
+    background-color: white;
+    transition: all 0.5s;
+    color: black;
+    font: 900 2rem "Ubuntu Mono","Roboto";
+    text-decoration: none;
+    padding: 2vmax 4vmax;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+transform: translate(-50% , -50%);
+}
+
+.homeCanvasContainer a:hover{
+    background-color: inherit;
+    color: white;
+}
+
+.homeScrollBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    border-radius: 100%;
+    transform: translate(-50% , -50%);
+    padding: 0.5vmax;
+    animation: scrollPop 0.5s ease-in-out infinite alternate;
+}
+.homeScrollBtn svg{
+    font-size: 3vmax;
+    color: white;
+}
+
+.homeContainer {
+    background-color: white;
+    padding-top: 4vmax;
+    border-radius: 0 0 150px 150px;
+    border-bottom: 200px solid white;
+    position: relative;
+    z-index: 1;
+}
+
+.homeContainer h3 {
+    text-align: center;
+    color: rgba(29, 14, 14, 0.445);
+    padding: 4vmax;
+}
+
+.homeSkill {
+    background-color: rgba(0, 0, 0, 0.705);
+    height: 1500px;
+    position: relative;
+    padding: 200px;
+    box-sizing: border-box;
+    perspective: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    transform: translateY(-150px);
+    margin-bottom: -150px;
+}
+
+.homeSkill h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 4vmax;
+    font-size: 4vmax;
+}
+
+.homeCubeSkills {
+    height: 180px;
+    width: 180px;
+    animation: cubeAni 20s linear infinite alternate;
+    transform-style: preserve-3d;
+}
+
+.homeCubeSkillFaces {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+.homeCubeSkillFaces img {
+    width: inherit;
+    height: inherit;
+    opacity: 0.8;
+}
+
+.homeCubeSkillFace1 {
+    transform: translate3d(0, 0, 120px);
+}
+
+.homeCubeSkillFace2 {
+    transform: rotateY(90deg) translate3d(0, 0, 120px);
+}
+
+.homeCubeSkillFace3 {
+    transform: rotateY(-90deg) translate3d(0, 0, 120px);
+}
+
+.homeCubeSkillFace4 {
+    transform: rotateY(180deg) translate3d(0, 0, 120px);
+}
+
+.homeCubeSkillFace5 {
+    transform: rotateX(90deg) translate3d(0, 0, 120px);
+}
+
+.homeCubeSkillFace6 {
+    transform: rotateX(-90deg) translate3d(0, 0, 120px);
+}
+
+.cubeShadow {
+    height: 40px;
+    width: 240px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.603);
+    animation: shadow 2s ease-in-out infinite alternate;
+    filter: blur(3px);
+}
+.homeSkillBox{
+    background-color: rgb(2, 71, 71);
+    padding: 0 2vmax;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: -200px;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.homeSkillBox svg{
+    font-size: 5vmax;
+    padding: 1vmax;
+    color: white;
+    margin: 6px 0;
+    cursor: pointer;
+}
+.homeSkillBox svg:hover{
+   transform: scale(1.2);
+   transition: all 0.5s;
+}
+
+.homeYoutube{
+    background-color: white;
+    padding-top: 4vmax;
+    border-radius: 150px 150px 0 0;
+    transform: translateY(-150px);
+    position: relative;
+    margin-bottom: -150px;
+    box-sizing: border-box;
+    min-height: 1000px;
+}
+
+.homeYoutube h3{
+    color: black;
+    text-align: center;
+}
+
+.homeYoutubeWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2vmax;
+    margin: auto;
+}
+
+@keyframes cubeAni {
+    to {
+        transform: rotateX(360deg) rotateY(480deg) rotateZ(720deg);
+    }
+}
+
+@keyframes shadow {
+    to {
+        transform: scale(1.1) translateY(10px);
+    }
+}
+@keyframes homeSkillBoxAniOn {
+    from{
+        right: -300px;
+    }
+    to {
+        right:40px;
+    }
+}
+@keyframes homeSkillBoxAniOff {
+    from{
+        right: 40px;
+    }
+    to {
+        right: -300px;
+    }
+}
+@keyframes scrollPop {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .homeCanvasContainer a{
+        font: 900 1rem "Ubuntu Mono","Roboto";
+        padding: 2vmax 4vmax;
+        top: 75%;
+        left: 50%;
+    transform: translate(-50% , -50%);
+    }
+    .homeCanvasBox h2{
+        font: 900 2rem "Ubuntu Mono","Roboto";
+        letter-spacing: 15px;
+        line-height: 80px;
+    }
+    
+}

@@ -1,0 +1,58 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circleA {
+    background-color: #00bfff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-color: #ff7f50;
+    animation: loaderAnimation 1s ease-in-out infinite ;
+}
+
+.circleB {
+    background-color: #00bfff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-color: #00bfff;
+    animation: loaderAnimation 1s ease-in-out infinite 0.3s;
+}
+
+.circleC {
+    background-color: #00bfff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-color: #7fff00;
+    animation: loaderAnimation 1s ease-in-out infinite 0.5s;
+}
+
+@keyframes loaderAnimation {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.4);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: scale(0.4);
+    }
+}

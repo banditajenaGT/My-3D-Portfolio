@@ -1,0 +1,27 @@
+.youtubeCard{
+    border: 1px solid rgb(0, 22, 122);
+    width: 300px;
+    transition: all 0.5s;
+    padding: 2vmax;
+    margin: 1vmax;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.youtubeCard a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.452);
+    width: inherit;
+}
+.youtubeCard img{
+    width: inherit;
+}
+.youtubeCard:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+}
+
+@media screen and (max-width:600px) {
+    .youtubeCard{
+        width: 200px;
+    }
+}

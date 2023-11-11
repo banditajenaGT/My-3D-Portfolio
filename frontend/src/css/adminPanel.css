@@ -1,0 +1,171 @@
+.adminPanel {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admitPanelContainer {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.admitPanelContainer h4 {
+    margin: 2vmax;
+    letter-spacing: 15px;
+    display: flex;
+    transform: translateY(-100vw);
+    animation: contactFormInputs 1s ease-in-out forwards;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.admitPanelContainer h4 p {
+    transition: all 0.5s;
+}
+
+.admitPanelContainer h4 p:hover {
+    transform: translateY(-10px);
+}
+
+.admitPanelContainer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4vmax;
+    padding-top: 0;
+}
+
+.admitPanelContainer form button {
+    width: 100%;
+    padding: 1vmax;
+    margin-top: 2vmax;
+    background-color: rgb(48, 46, 87);
+}
+
+.adminPanelLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.adminPanelLinks a {
+    background-color: rgb(131, 255, 162);
+    display: flex;
+    transition: all 0.5s;
+    flex-direction: column;
+    font: 400 1.5rem "Roboto", sans-serif;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20%;
+    text-decoration: none;
+    padding: 2vmax;
+    cursor: pointer;
+    margin: 1vmax;
+}
+
+.adminPanelLinks a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.329);
+    transform: scale(1.1);
+}
+
+.adminPanelInputs {
+    width: 50%;
+    padding: 1vmax 2vmax;
+    margin: 1vmax;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 30px;
+    font: 100 1rem "Roboto";
+    outline: none;
+    box-sizing: border-box;
+}
+
+.admitPanelSkill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admitPanelSkill div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vmax;
+}
+
+.admitPanelSkill div p {
+    font: 400 1.5rem "Roboto", sans-serif;
+    margin-right: 2vmax;
+    color: rgba(0, 0, 0, 0.63);
+}
+
+.adminPanelFileUpload::-webkit-file-upload-button {
+    width: 100%;
+    border-radius: 40px;
+    border: none;
+    font: 400 1.5rem "Roboto", sans-serif;
+    cursor: pointer;
+    background-color: rgb(1, 107, 107);
+    padding: 1vmax;
+    color: white;
+}
+
+.adminPanelFileUpload::-webkit-file-upload-button:hover {
+    background-color: rgb(32, 48, 48);
+}
+
+.adminPanelAbout fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.295);
+    margin: 2vmax 0;
+    padding-bottom: 2vmax;
+    border-radius: 10px;
+}
+
+.adminPanelAbout fieldset legend {
+    margin: 2vmax;
+    font: 500 1.5rem "Roboto", sans-serif;
+    opacity: 0.6;
+}
+
+.adminPanelAbout fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.295);
+    margin: 2vmax 0;
+    padding-bottom: 2vmax;
+    border-radius: 10px;
+}
+
+.adminPanelAbout {
+    width: 100%;
+}
+
+.adminPanelYoutube {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.adminPanelDeleteButton svg{
+    margin: auto;
+    display: block;
+    color: rgb(5, 42, 112);
+    transition: all 0.5s;
+}
+
+.adminPanelDeleteButton svg:hover {
+    color: rgb(255, 0, 0);
+    transform: scale(1.2);
+}
