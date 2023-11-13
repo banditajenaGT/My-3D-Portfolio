@@ -15,6 +15,7 @@ import Loading from './components/Loading';
 import Timeline from './components/AdminPanel/Timeline';
 import Youtube from './components/AdminPanel/Youtube';
 import Projects from './components/AdminPanel/Projects';
+import NotFound from './components/NotFound';
 
 function App() {
   const dispatch = useDispatch()
@@ -40,6 +41,7 @@ function App() {
             <Route path='/admin/timeline' element={isAuthenticated ? <Timeline /> : <Login />} />
             <Route path='/admin/youtube' element={isAuthenticated ? <Youtube /> : <Login />} />
             <Route path='/admin/projects' element={isAuthenticated ? <Projects /> : <Login />} />
+            <Route path='*' element={ <NotFound />} />
           </Routes>
 
           <Footer />
