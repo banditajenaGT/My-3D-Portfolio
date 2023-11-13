@@ -4,6 +4,7 @@ import { connectDatabase } from "./config/database.js"
 import { userRouter } from "./routes/user.js";
 import cookieParser from "cookie-parser";
 import cloudinary from 'cloudinary'
+import path from 'path'
 
 const app = express()
 
@@ -22,6 +23,12 @@ app.use(express.urlencoded({extended:true,limit:"50mb"}))
 app.use(cookieParser())
 
 app.use("/api/v1", userRouter)
+
+app.use(express.static(path.join(__dirname,"../frontend/build")))
+app.get("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"../frontend/build/index.html"))
+})
+
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is listening on: http://localhost:${process.env.PORT}`)
