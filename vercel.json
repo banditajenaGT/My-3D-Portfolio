@@ -3,8 +3,7 @@
     "builds": [
       {
         "src": "backend/server.js",
-        "use": "@vercel/node",
-        "config": { "outputDirectory": "/frontend/build" }
+        "use": "@vercel/node"
       }
     ],
     "routes": [
