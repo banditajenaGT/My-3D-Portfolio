@@ -5,7 +5,7 @@
   "main": "backend/server.js",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"node backend/server.js\" \"cd frontend && npm run build\"",
+    "start": "concurrently \"cd frontend && npm run build\" \"node backend/server.js\"",
     "dev": "nodemon backend/server.js"
   },
   "author": "",
